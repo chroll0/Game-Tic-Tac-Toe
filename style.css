@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "TicTacToe";
+  src: url(DragonHunter-9Ynxj.otf);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00141e;
+  font-family: "TicTacToe";
+}
+.gameBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: #072c38 0px 0px 5px 5px;
+  width: 380px;
+  height: 630px;
+}
+#gameContent {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  width: 360px;
+  height: 360px;
+  background-color: #072c38;
+  border-radius: 5px;
+}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 4px;
+  font-size: 70px;
+  cursor: pointer;
+}
+.oSquare {
+  color: "#cc301fde";
+}
+.square:hover {
+  box-shadow: none;
+}
+.textContent {
+  width: 360px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.logo {
+  color: #df1414;
+  font-size: 45px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin: 20px 0;
+  letter-spacing: 2.5px;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 113, 49, 1) 19%,
+    rgba(204, 48, 31, 1) 63%
+  );
+  animation-name: colorChange;
+  animation-duration: 12s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+}
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(
+      90deg,
+      rgba(17, 113, 49, 1) 19%,
+      rgba(204, 48, 31, 1) 63%
+    );
+  }
+  20% {
+    background: rgba(17, 113, 49, 1) 19%;
+  }
+  40% {
+    background: rgba(204, 48, 31, 1) 63%;
+  }
+  60% {
+    background: rgba(17, 113, 49, 1) 19%;
+  }
+  80% {
+    background: rgba(204, 48, 31, 1) 63%;
+  }
+  100% {
+    background: linear-gradient(
+      90deg,
+      rgba(17, 113, 49, 1) 19%,
+      rgba(204, 48, 31, 1) 63%
+    );
+  }
+}
+.scoreContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scoreContent button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "TicTacToe";
+  color: white;
+  background-color: #072c38;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.scoreContent button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(17, 113, 49, 1) 29%,
+    rgba(204, 48, 31, 1) 63%
+  );
+}
+.scoreContent p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  height: 35px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+.scoreContent p :first-child {
+  width: 70px;
+  height: 35px;
+  margin-right: 10px;
+  background-color: #1171319a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.scoreContent p :nth-child(2) {
+  width: 70px;
+  height: 35px;
+  background-color: #cc301fa9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.statusText {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.winLine {
+  width: 90%;
+  height: 90%;
+}
