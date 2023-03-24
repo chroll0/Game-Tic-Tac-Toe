@@ -62,11 +62,17 @@ function checkWinner() {
       roundWon = true;
       scoreX++;
       finalScoreX.textContent = `X : ${scoreX}`;
+      squares.forEach((square) => {
+        square.classList.add("wonSquare");
+      });
       break;
     } else if (squareA == "O" && squareA == squareB && squareB == squareC) {
       roundWon = true;
       scoreO++;
       finalScoreO.textContent = `${scoreO} : O`;
+      squares.forEach((square) => {
+        square.classList.add("wonSquare");
+      });
       break;
     }
   }
@@ -86,8 +92,10 @@ function restartGame() {
   } else if (currentPlayer == "O") {
     currentPlayer = "O";
   }
-
   statusText.textContent = `${currentPlayer}'s Turn`;
-  squares.forEach((square) => (square.textContent = ""));
+  squares.forEach((square) => {
+    square.textContent = "";
+    square.classList.remove("wonSquare");
+  });
   playing = true;
 }
